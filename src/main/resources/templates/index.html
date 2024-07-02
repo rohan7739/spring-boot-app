@@ -1,25 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link data-th-href="@{/css/main.css?{id}(id=${timestamp})}" rel="stylesheet">
-    <title>CI/CD Master Class By Abhishek Veeramalla</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77a5f8 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: right;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .profile-img {
+            float: left;
+            width: 164px;
+            height: 200px;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-left: 23px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            padding: 20px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h1 {
+            color: #333;
+        }
+        .content p {
+            width: 894px;
+            line-height: 1.6;
+        }
+        .content:hover {
+            background-color: #e2e2e2;
+            transition: background-color 0.3s ease-in;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1><a href="#">Rohan Surve</a></h1>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <section class="content">
+            <img src="portfolio_image.jpg" alt="Profile Picture" class="profile-img">
+            <div>
+                <h1>Rohan Surve</h1>
+                <p>Aspiring DevOps Engineer<br>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Ultimate CI/CD Pipeline using Java</div></a>
-</nav>
+                    I am Rohan Surve, a recent graduate with a Bachelor's degree in Computer Science, eager to embark on a career as a DevOps Engineer. My academic background has provided me with a solid understanding of software development, system administration, and cloud computing. I have hands-on experience with essential DevOps tools such as Docker, Kubernetes, Jenkins, and Ansible, gained through academic projects and internships. My proficiency in scripting languages like Python and Bash, along with a keen interest in continuous integration and continuous deployment (CI/CD) practices, drives my passion for automating workflows and enhancing system reliability. I am highly motivated, a quick learner, and excited to contribute to a forward-thinking team where I can grow and apply my skills to build and maintain scalable, efficient infrastructure.</p>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Jenkins</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Ansible</li>
+                    <li>Git</li>
+                    <li>Python</li>
+                    <li>Bash</li>
 
-<main role="main" class="container">
-    <div class="starter-template">
-        <h1 th:text="${title}">Default title.</h1>
-        <p th:text="${msg}">Default text.</p>
+                </ul>
+            </div>
+        </section>
+        <section id="about" class="content">
+            <h1>About Me</h1>
+            <p>I am Rohan Surve, a passionate and dedicated aspiring DevOps Engineer with a Bachelor's degree in Information Technology. My journey in the tech world began with a deep fascination for software development and system operations, which eventually led me to explore the dynamic field of DevOps. Throughout my academic career, I have cultivated a robust understanding of various programming languages, including Python, Java, and Bash, and have developed a strong proficiency in automation tools like Docker, Kubernetes, Jenkins, and Ansible.
+
+                During my internships, I had the opportunity to work on real-world projects where I implemented CI/CD pipelines, automated deployment processes, and optimized cloud infrastructure on platforms like AWS and Azure. These experiences have honed my skills in troubleshooting, system monitoring, and performance tuning, ensuring high availability and scalability of applications.
+                
+                I am a proactive learner who thrives in fast-paced environments and enjoys solving complex problems. My ability to collaborate effectively with cross-functional teams, coupled with a relentless drive for continuous improvement, positions me as a promising candidate for a DevOps Engineer role. I am excited to contribute my skills and grow professionally within an innovative organization that values agility, efficiency, and cutting-edge technology.
+                
+                </p>
+        </section>
+        <section id="portfolio" class="content">
+            <h1>Portfolio</h1>
+            <p>Here are some of my works:</p>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </section>
+        <section id="contact" class="content">
+            <h1>Contact</h1>
+            <p><b>Email:</b> surverohan12345@gmail.com</p>
+        </section>
     </div>
-</main>
-
-<script data-th-src="@{/js/main.js}"></script>
 </body>
-
 </html>
+
